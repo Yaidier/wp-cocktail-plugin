@@ -1,0 +1,145 @@
+.wn_cocktails_wrapper * {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+
+.wn_ckt_letters_container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.wn_ckt_letter_box {
+	display: block;
+	background-color: #fff;
+	box-shadow: 5px 5px 20px #00000036;
+	margin: 15px;
+	width: 100px;
+	height: 100px;
+	border-radius: 5px;
+	text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.wn_ckt_letter_box:hover {
+    box-shadow: 5px 5px 20px #0000004b;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+.wn_ckt_drinks_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.wn_ckt_cocktail_box_wrapper {
+	background-color: transparent;
+	width: 100%;
+	height: 200px;
+	perspective: 1000px;
+	margin: 20px 15px;
+	max-width: 250px;
+    cursor: pointer;
+}
+
+.wn_ckt_cocktail_inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s ease; 
+	transform-style: preserve-3d;
+	box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.2);
+	border-radius: 10px;
+}
+
+.wn_ckt_cocktail_box_wrapper:hover {
+    z-index: 2;
+}
+
+.wn_ckt_cocktail_box_wrapper:hover .wn_ckt_cocktail_inner {
+    transform: rotateY(180deg);
+}
+.wn_ckt_cocktail_box_wrapper:hover .wn_ckt_cocktail_back {
+    transform: rotateY(180deg) scale(1.4);
+    transition: transform 0.6s ease;
+    z-index: 100;
+}
+
+.wn_ckt_dark_overlay {
+	width: 100%;
+	height: 100%;
+	background-color: #00000069;
+	position: absolute;
+	border-radius: 10px;
+	z-index: -1;
+}
+
+.wn_ckt_cocktail_front, 
+.wn_ckt_cocktail_back {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.wn_ckt_cocktail_front {
+	align-items: center;
+	background-color: #fff;
+	color: #230312;
+	border-radius: 10px;
+}
+
+.wn_ckt_cocktail_back {
+    flex-direction: column;
+    align-items: center;
+	background-color: #230312;
+	color: white;
+	transform: rotateY(180deg);
+	border-radius: 10px;
+    transition: transform 0.6s ease;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: normal;
+}
+
+.wn_ckt_cocktail_back > label {
+    font-size: 1rem;
+    margin: 10px;
+}
+
+
+
+.wn_ckt_letter_box a {
+	line-height: 100px;
+	font-size: 1.5rem;
+	color: #230312;
+}
+
+.wn_ckt_letter_box__active {
+    background-color: #230312;
+}
+
+.wn_ckt_letter_box__active > a {
+    color: #FFFF;
+}
+
+.wn_ckt_error_message {
+	background-color: white;
+	padding: 50px;
+	margin-top: 100px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 30px #0003;
+	margin-left: auto;
+	margin-right: auto;
+    opacity: 0;
+    transition: 0.3s ease;
+}
